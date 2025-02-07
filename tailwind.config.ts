@@ -11,7 +11,7 @@ export default {
       colors: {
         black: "#000000",
         white: "#ffffff",
-        jet: "#2a2b2a",
+        jet: "#1E1F1E",
         softBlue: "#90e0f3",
         ashGray: "#aab2a9",
         roseQuartz: "#b08ea2",

@@ -1,7 +1,7 @@
-import Title from "./components/Title";
+import NavBar from "./components/NavBar";
 
 export default function Home() {
   return (
-    <Title variant="small"/>
+    <NavBar />
   );
 }

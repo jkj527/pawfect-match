@@ -8,8 +8,8 @@ interface TitleProps {
 const Title: React.FC<TitleProps> = ({ variant = 'large' }) => {
 
     const isLarge = variant === 'large';
-    const textSize = isLarge ? 'text-8xl' : 'text-4xl';
-    const iconSize = isLarge ? 80 : 36;
+    const textSize = isLarge ? 'text-7xl' : 'text-4xl';
+    const iconSize = isLarge ? 72 : 36;
 
     const hoverClasses = isLarge ? 'transition-transform duration-300 hover:-translate-y-1 hover:scale-110' : '';
 

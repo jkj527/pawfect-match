@@ -11,7 +11,7 @@ const NavBar: React.FC = () => {
   const navItems = [
     { name: "Search", href: "/search" },
     { name: "Favorites", href: "/favorites" },
-    { name: "Profile", href: "/profile" },
+    { name: "Account", href: "/account" },
   ];
 
   const toggleMobileMenu = () => setMobileMenuOpen(!mobileMenuOpen);

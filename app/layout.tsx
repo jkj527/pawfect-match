@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Montserrat_Alternates } from "next/font/google";
-import "./globals.css";
+import "./styles/globals.css";
 
 const montserrat =  Montserrat_Alternates({
   subsets: ["latin"],
@@ -13,11 +13,7 @@ export const metadata: Metadata = {
   description: "Find your perfect pet partner!",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={montserrat.variable}>
       <body>

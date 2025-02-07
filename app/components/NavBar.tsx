@@ -17,7 +17,7 @@ const NavBar: React.FC = () => {
   const toggleMobileMenu = () => setMobileMenuOpen(!mobileMenuOpen);
 
   return (
-    <nav className="fixed top-0 w-full z-50 bg-white dark:bg-black backdrop-blur-sm border-b border-black dark:border-white py-4 shadow-sm">
+    <nav className="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md border border-ashGray/50 py-4 shadow-lg rounded-b-2xl">
       <div className="max-w-full px-6 md:px-12 flex items-center justify-between">
 
         <Link href="/">
@@ -29,7 +29,7 @@ const NavBar: React.FC = () => {
           {navItems.map((item) => (
             <li key={item.name}>
               <Link href={item.href}>
-                <span className="group text-black dark:text-white text-xl relative cursor-pointer transition-transform duration-300 hover:scale-110">
+                <span className="group text-black text-xl relative cursor-pointer transition-transform duration-300 hover:scale-110">
                   {item.name}
                   <span className="absolute left-0 -bottom-1 w-full h-0.5 bg-gradient-to-r from-cerulean to-softBlue opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </span>
@@ -40,7 +40,7 @@ const NavBar: React.FC = () => {
 
         {/* Mobile nav button */}
         <div className="md:hidden">
-          <button onClick={toggleMobileMenu} className="text-black dark:text-white focus:outline-none">
+          <button onClick={toggleMobileMenu} className="text-black focus:outline-none">
             {mobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
           </button>
         </div>
@@ -55,7 +55,7 @@ const NavBar: React.FC = () => {
                 <Link href={item.href}>
                   <span
                     onClick={() => setMobileMenuOpen(false)}
-                    className="group block text-black dark:text-white text-xl relative cursor-pointer transition-transform duration-300 hover:scale-105"
+                    className="group block text-black text-xl relative cursor-pointer transition-transform duration-300 hover:scale-105"
                   >
                     {item.name}
                     <span className="absolute right-0 -bottom-1 w-1/6 h-0.5 bg-gradient-to-l from-cerulean to-softBlue opacity-0 group-hover:opacity-100 transition-opacity duration-300" />

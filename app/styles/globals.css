@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  @apply font-body font-light bg-white text-black dark:bg-black dark:text-white;
+  @apply font-body font-light bg-white text-black;
 }
 
 h1, h2, h3, h4, h5, h6 {

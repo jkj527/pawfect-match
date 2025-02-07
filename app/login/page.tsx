@@ -1,15 +1,32 @@
 "use client";
 
 import React, { useState } from "react";
+import { useRouter } from "next/navigation";
 import Title from "@/app/components/Title";
 
 const LoginPage: React.FC = () => {
+    const router = useRouter();
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
 
-    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        // PUT MY LOGIN LOGIC HERE!!!!!!!!!
+        try {
+            const res = await fetch("https://frontend-take-home-service.fetch.com/auth/login", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                credentials: "include",
+                body: JSON.stringify({ name, email }),
+            });
+            if (res.ok) {
+                router.push('/');
+            } else {
+                alert('Login failed. Please submit valid credentials.');
+            }
+        } catch (error) {
+            console.log("Error logging in:", error);
+            alert("Error logging in.");
+        }
     };
 
     return (

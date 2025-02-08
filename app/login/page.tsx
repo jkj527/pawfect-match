@@ -2,30 +2,23 @@
 
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
+import { useAuth } from "../contexts/AuthContext";
 import Title from "@/app/components/Title";
 
 const LoginPage: React.FC = () => {
     const router = useRouter();
+    const { login } = useAuth();
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        try {
-            const res = await fetch("https://frontend-take-home-service.fetch.com/auth/login", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                credentials: "include",
-                body: JSON.stringify({ name, email }),
-            });
-            if (res.ok) {
-                router.push('/');
-            } else {
-                alert('Login failed. Please submit valid credentials.');
-            }
-        } catch (error) {
-            console.log("Error logging in:", error);
-            alert("Error logging in.");
+        const success = await login(name, email);
+        if (success) {
+            console.log("Woof woof from login, you're in!");
+            router.push('/');
+        } else {
+            alert("Login failed")
         }
     };
 

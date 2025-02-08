@@ -17,7 +17,7 @@ const NavBar: React.FC = () => {
   const toggleMobileMenu = () => setMobileMenuOpen(!mobileMenuOpen);
 
   return (
-    <nav className="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md border border-ashGray/50 py-4 shadow-lg rounded-b-2xl">
+    <nav className="sticky top-0 w-full z-50 bg-white/90 backdrop-blur-md border border-ashGray/50 py-4 shadow-lg rounded-b-2xl">
       <div className="max-w-full px-6 md:px-12 flex items-center justify-between">
 
         <Link href="/">

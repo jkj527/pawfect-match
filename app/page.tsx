@@ -1,10 +1,10 @@
 "use client";
 
 import React, { useEffect } from "react";
-import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useAuth } from "./contexts/AuthContext";
 import NavBar from "./components/NavBar";
+import LinkCard from "./components/LinkCard";
 
 export default function Home() {
   const router = useRouter();
@@ -15,18 +15,21 @@ export default function Home() {
   useEffect(() => {
     if (!isAuthenticated) {
       console.log("Bark bark go login!");
-      router.push('/login');
+      router.push("/login");
     }
   }, [isAuthenticated, router]);
 
   if (!isAuthenticated) {
-    return <div>Bark bark bark...</div>
-  };
+    return <div>Bark bark bark...</div>;
+  }
 
   return (
-    <>
+    <div className="min-h-screen flex flex-col">
       <NavBar />
-      <main></main>
-    </>
+      <main className="flex flex-grow flex-col md:flex-row items-center justify-center gap-6">
+        <LinkCard href="/search" label="Search" />
+        <LinkCard href="/favorites" label="Favorites" />
+      </main>
+    </div>
   );
 }

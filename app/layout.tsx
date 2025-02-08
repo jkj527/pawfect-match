@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { AuthProvider } from "./contexts/AuthContext";
+import { FavoritesProvider } from "./contexts/FavoritesContext";
 import { Montserrat_Alternates } from "next/font/google";
 import "./styles/globals.css";
 
@@ -19,7 +20,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en" className={montserrat.variable}>
       <body className="bg-[url('/pawfectmatchbg.jpeg')] bg-cover bg-center">
         <AuthProvider>
+          <FavoritesProvider>
           {children}
+          </FavoritesProvider>
         </AuthProvider>
       </body>
     </html>

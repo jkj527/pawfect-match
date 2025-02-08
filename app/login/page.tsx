@@ -23,7 +23,7 @@ const LoginPage: React.FC = () => {
     };
 
     return (
-        <main className="min-h-screen flex items-center justify-center bg-white">
+        <main className="min-h-screen flex items-center justify-center">
             <form
                 onSubmit={handleSubmit}
                 className="flex flex-col md:flex-row items-center space-y-6 md:space-y-0 md:space-x-8"

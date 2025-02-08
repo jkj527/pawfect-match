@@ -9,8 +9,8 @@ const NavBar: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navItems = [
-    { name: "Search", href: "/search" },
-    { name: "Favorites", href: "/favorites" },
+    { name: "Search", href: "/dogs/search" },
+    { name: "Favorites", href: "/dogs/favorites" },
     { name: "Account", href: "/account" },
   ];
 

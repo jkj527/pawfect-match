@@ -27,8 +27,8 @@ export default function Home() {
     <div className="min-h-screen flex flex-col">
       <NavBar />
       <main className="flex flex-grow flex-col md:flex-row items-center justify-center gap-6">
-        <LinkCard href="/search" label="Search" />
-        <LinkCard href="/favorites" label="Favorites" />
+        <LinkCard href="/dogs/search" label="Search" />
+        <LinkCard href="/dogs/favorites" label="Favorites" />
       </main>
     </div>
   );

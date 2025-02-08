@@ -7,7 +7,7 @@ const AccountDropdown: React.FC = () => {
   const { user, logout } = useAuth();
 
   return (
-    <div className="absolute right-0 mt-2 w-48 bg-white/90 backdrop-blur-md border border-ashGray/50 rounded-lg shadow-md p-4">
+    <div className="absolute right-0 flex flex-col flex-wrap mt-2 bg-white/90 backdrop-blur-md border border-ashGray/50 rounded-lg shadow-md p-4">
       <p className="text-sm text-jet">Signed in as:</p>
       <p className="text-sm font-bold text-ashGray">
         {user?.name || "Guest"}

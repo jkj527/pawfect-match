@@ -6,6 +6,7 @@ import { useAuth } from "@/app/contexts/AuthContext";
 import NavBar from "@/app/components/NavBar";
 import DogCard from "@/app/components/DogCard";
 import { useFavorites } from "@/app/contexts/FavoritesContext";
+import MatchGenerator from "@/app/components/GenerateMatch";
 
 const FavoritesPage: React.FC = () => {
   const { favorites } = useFavorites();
@@ -41,6 +42,7 @@ const FavoritesPage: React.FC = () => {
             ))}
           </div>
         )}
+        <MatchGenerator />
       </main>
     </div>
   );

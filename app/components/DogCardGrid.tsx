@@ -75,6 +75,7 @@ const DogCardGrid: React.FC = () => {
             setTotal(searchData.total);
         } catch (error) {
             console.error("Error fetching dogs:", error);
+            alert("Error fetching dogs.");
         }
         setLoading(false);
     }
